@@ -47,6 +47,9 @@ public class CacheConfiguration {
             createCache(cm, com.mirzabeg.myparkingapp.domain.User.class.getName());
             createCache(cm, com.mirzabeg.myparkingapp.domain.Authority.class.getName());
             createCache(cm, com.mirzabeg.myparkingapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mirzabeg.myparkingapp.domain.Lot.class.getName());
+            createCache(cm, com.mirzabeg.myparkingapp.domain.Wallet.class.getName());
+            createCache(cm, com.mirzabeg.myparkingapp.domain.Booking.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
