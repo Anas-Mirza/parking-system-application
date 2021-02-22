@@ -1,0 +1,27 @@
+entity Lot {
+name String required, 
+address String required, 
+zipcode String required minlength(6),
+maxslots Integer required,
+availableslots Integer,
+isopen Boolean
+}
+
+entity Wallet {
+money Integer
+}
+
+entity Booking {
+vehicleno String required,
+entrytime Instant,
+exittime Instant
+}
+
+relationship ManyToOne {
+  Booking{user(login) } to User
+  Booking{lot(name) required} to Lot
+}
+
+relationship OneToOne {
+  Wallet{user(login) required} to User
+}
