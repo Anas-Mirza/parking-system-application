@@ -1,0 +1,48 @@
+{
+  "name": "Booking",
+  "fields": [
+    {
+      "fieldName": "vehicleno",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "entrytime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "exittime",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "booking",
+      "relationshipName": "user",
+      "otherEntityField": "login"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "booking",
+      "relationshipValidateRules": "required",
+      "relationshipName": "lot",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20210222161937",
+  "entityTableName": "booking",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
